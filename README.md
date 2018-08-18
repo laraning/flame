@@ -6,7 +6,6 @@
 <a href="https://packagist.org/packages/laraning/flame"><img src="https://poser.pugx.org/laraning/flame/v/stable.svg" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/laraning/flame"><img src="https://poser.pugx.org/laraning/flame/license.svg" alt="License"></a>
 <a href="https://github.styleci.io/repos/145177976"><img src="https://github.styleci.io/repos/145177976/shield" alt="Style CI"></a>
-<a href="https://img.shields.io/github/release/laraning/flame.svg?style=flat-square"><img src="https://github.com/laraning/flame/releases" alt="Releases"></a>
 </p>
 
 ## About Flame

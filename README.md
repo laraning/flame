@@ -37,7 +37,7 @@ If you use this package you will:
 composer require laraning/flame
 ```
 
-The package will automatically register itself (using [auto-discover](https://laravel-news.com/package-auto-discovery)).
+#### The package will automatically register itself (using [auto-discover](https://laravel-news.com/package-auto-discovery)).
 
 2. Next step is to publish the flame.php configuration file into your config folder.
 
@@ -45,7 +45,11 @@ The package will automatically register itself (using [auto-discover](https://la
 php artisan vendor:publish --tag=flame-configuration
 ```
 
-3. There is no step 3! All done! :smile:
+All done! :smile:
+
+## Getting started in less than 1 minute
+
+1. Flame creates a demo route on your <localhost>/flame url. You can try it out now!
 
 ## Contributing
 

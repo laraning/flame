@@ -18,8 +18,6 @@ If you use this package you will:
 * Be able to execute Controller actions inside Twinkles prior to the view rendering.
 * Structure your application as feature modules, having a much better code readability, structure and reusability!
 
-
-
 ## Current development status
 - [x] Finish core development.
 - [ ] Finish identified issues/improvements for Alpha release 0.1.x.

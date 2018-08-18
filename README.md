@@ -29,6 +29,16 @@ If you use this package you will:
 - [ ] Finalize video tutorials.
 - [ ] Release for General Public use.
 
+## Installation
+
+You can install this package via composer using this command:
+
+```bash
+composer require laraning/flame
+```
+
+The package will automatically register itself (using [auto-discover](https://laravel-news.com/package-auto-discovery)).
+
 ## Contributing
 
 At the moment you don't need to contribute since Flame is still in development.

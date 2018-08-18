@@ -1,4 +1,4 @@
-<p align="center"><img src="https://flame.laraning.com/assets/logos/logo-deploy.jpg"></p>
+<p align="center"><img style="max-width: 180px" src="https://flame.laraning.com/assets/logos/logo-deploy.jpg"></p>
 
 <p align="center">
 <a href="https://travis-ci.org/laraning/flame"><img src="https://travis-ci.org/laraning/flame.svg" alt="Build Status"></a>

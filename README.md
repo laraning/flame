@@ -37,7 +37,7 @@ The same applies for the Panels that you create. They will run given your main C
 
 ## Installation
 
-1. You can install this package via composer using this command:
+You can install this package via composer using this command:
 
 ```bash
 composer require laraning/flame
@@ -45,7 +45,7 @@ composer require laraning/flame
 
 ###### The package will automatically register itself (using [auto-discover](https://laravel-news.com/package-auto-discovery)).
 
-2. Next step is to publish the flame.php configuration file into your config folder.
+Next step is to publish the flame.php configuration file into your config folder.
 
 ```bash
 php artisan vendor:publish --tag=flame-configuration
@@ -62,7 +62,11 @@ This means that you have can see the Demo feature located in the Laraning\Flame\
 
 ## Creating your first Feature
 
+Simple as this. Just write the following command:
 
+```bash
+php artisan make:feature
+```
 
 ## Contributing
 

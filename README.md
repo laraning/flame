@@ -18,11 +18,21 @@ If you use this package you will:
 * Be able to execute Controller actions inside Twinkles prior to the view rendering.
 * Structure your application as feature modules, having a much better code readability, structure and reusability!
 
+## Why Flame
+
+I've built Flame because I was starting to have medium size applications with a lot of Blade views, components and it was difficult to pass
+Controller data results inside those views given the type of controller action that I was running. So, I thought "what if I have a way to know automatically what
+actions am I running and then automatically load my graphical layout accordingly to that action, reusing the layout and not just create more and more views?"
+
+Flame allows you to automate this. You will create your Panels and Twinkles, but also they will be have a Controller attached to them. This Panel/Twinkle
+controller will be used to pass data automatically to them given the action you're running. And all of this without coding anything!
+
 ## How it works
 
-Flame creates a Feature directory structure that will allow you to render your views using Panels. These Panels can then have inside Twinkles. Each Twinkle, before rendering its own content, will try to check if it have its own Twinkle Controller. If it exists then it first loads the respective Twinkle controller action method, and returns the result data into your Twinkle view.
+Each time you run a route action, Flame will give you the exact Panel and Twinkles that are needed to run for the respective action.
+So, all you have to do is to have the action methods on the respective Panel and Twinkle controllers and they will run automatically.
 
-The same applies for the Panels that you create. They will run given your main Controller action that you are calling. Meaning you can have an "index" panel, and a "store" panel and Flame will know what panel should be rendered in what moment.
+Here is a small example:
 
 ## Current development status
 - [x] Finish core development.

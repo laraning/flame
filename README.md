@@ -19,8 +19,14 @@ If you use this package you will:
 
 ## Current development status
 - [x] Finish core development.
-- [ ] Finish identified improvements for first release.
+- [ ] Finish identified issues/improvements for Alpha release 0.1.x.
+- [ ] Close Alpha (0.1.x) release.
+- [ ] Finish identified issues/improvements for Beta release 0.2.x.
+- [ ] Close Beta (0.2.x) release.
 - [ ] Test coverage > 90%.
+- [ ] Finalize documentation.
+- [ ] Finalize video tutorials.
+- [ ] Release for General Public use.
 
 ## Contributing
 

@@ -5,6 +5,7 @@
 <a href="https://packagist.org/packages/laraning/flame"><img src="https://poser.pugx.org/laraning/flame/d/total.svg" alt="Total Downloads"></a>
 <a href="https://packagist.org/packages/laraning/flame"><img src="https://poser.pugx.org/laraning/flame/v/stable.svg" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/laraning/flame"><img src="https://poser.pugx.org/laraning/flame/license.svg" alt="License"></a>
+<a href="https://github.styleci.io/repos/145177976"><img src="https://github.styleci.io/repos/145177976/shield" alt="Style CI"></a>
 </p>
 
 ## About Flame
@@ -15,7 +16,9 @@ If you use this package you will:
 * Create your features in a standard code-convention way.
 * Create and re-use graphical components (called Twinkles) that will make you improve your layout code structure.
 * Be able to execute Controller actions inside Twinkles prior to the view rendering.
-* Structure your application as feature modules, having a much better code read, strucuture and reusability!
+* Structure your application as feature modules, having a much better code readability, structure and reusability!
+
+
 
 ## Current development status
 - [x] Finish core development.

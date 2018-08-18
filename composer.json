@@ -1,0 +1,42 @@
+{
+    "name": "laraning/flame",
+    "description": "Flame - A Feature-driven development (FDD) Laravel package",
+    "type": "library",
+    "keywords": [
+        "flame",
+        "laraning",
+        "laravel",
+        "framework",
+        "php"
+    ],
+    "require": {
+        "illuminate/support": "^5.6",
+        "php": "^7.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Laraning\\Flame\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Laraning",
+            "email": "bruno.falcao@laraning.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Laraning\\Flame\\FlameServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev"
+}

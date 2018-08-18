@@ -1,4 +1,4 @@
-<p align="center"><img src="https://flame.laraning.com/assets/logos/logo-deploy.jpg"></p>
+<p align="center"><img src="https://flame.laraning.com/assets/logos/logo-deploy.jpg" width="150"></p>
 
 <p align="center">
 <a href="https://travis-ci.org/laraning/flame"><img src="https://travis-ci.org/laraning/flame.svg" alt="Build Status"></a>
@@ -17,6 +17,12 @@ If you use this package you will:
 * Create and re-use graphical components (called Twinkles) that will make you improve your layout code structure.
 * Be able to execute Controller actions inside Twinkles prior to the view rendering.
 * Structure your application as feature modules, having a much better code readability, structure and reusability!
+
+## How it works
+
+Flame creates a Feature directory structure that will allow you to render your views using Panels. These Panels can then have inside Twinkles. Each Twinkle, before rendering its own content, will try to check if it have its own Twinkle Controller. If it exists then it first loads the respective Twinkle controller action method, and returns the result data into your Twinkle view.
+
+The same applies for the Panels that you create. They will run given your main Controller action that you are calling. Meaning you can have an "index" panel, and a "store" panel and Flame will know what panel should be rendered in what moment.
 
 ## Current development status
 - [x] Finish core development.
@@ -47,10 +53,16 @@ php artisan vendor:publish --tag=flame-configuration
 
 All done! :smile:
 
-## Getting started in less than 1 minute
+## Getting started
 
-Flame creates a demo route on your <localhost>/flame url. You can try it and should see:
-<p align="center"><img src="https://flame.laraning.com/assets/github/preview.jpg"></p>
+Flame creates a demo route on your /flame url. You can try it and should see:
+<p align="center"><img src="https://flame.laraning.com/assets/github/preview.jpg" width="400"></p>
+
+This means that you have can see the Demo feature located in the Laraning\Flame\Features\Demo namespace.
+
+## Creating your first Feature
+
+
 
 ## Contributing
 

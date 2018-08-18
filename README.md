@@ -1,4 +1,4 @@
-<p align="center"><img style="max-width: 180px" src="https://flame.laraning.com/assets/logos/logo-deploy.jpg"></p>
+<p align="center">![Laraning Flame](https://flame.laraning.com/assets/logos/logo-deploy.jpg)</p>
 
 <p align="center">
 <a href="https://travis-ci.org/laraning/flame"><img src="https://travis-ci.org/laraning/flame.svg" alt="Build Status"></a>
@@ -7,17 +7,15 @@
 <a href="https://packagist.org/packages/laraning/flame"><img src="https://poser.pugx.org/laraning/flame/license.svg" alt="License"></a>
 </p>
 
-## About Laravel
+## About Flame
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
+Laraning Flame is a Feature Development-driven framework that will improve the way you structure and develop your application features.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+If you use this package you will:
+- Create your features in a standard code-convention way.
+- Create and re-use graphical components (called Twinkles) that will make you improve your layout code structure.
+- Be able to execute Controller actions inside Twinkles prior to the view rendering.
+- Structure your application as feature modules, having a much better code read, strucuture and reusability.
 
 Laravel is accessible, yet powerful, providing tools needed for large, robust applications.
 

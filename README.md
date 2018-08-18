@@ -31,7 +31,7 @@ If you use this package you will:
 
 ## Installation
 
-You can install this package via composer using this command:
+1. You can install this package via composer using this command:
 
 ```bash
 composer require laraning/flame
@@ -39,10 +39,18 @@ composer require laraning/flame
 
 The package will automatically register itself (using [auto-discover](https://laravel-news.com/package-auto-discovery)).
 
+2. Next step is to publish the flame.php configuration file into your config folder.
+
+```bash
+php artisan vendor:publish --tag=flame-configuration
+```
+
+3. There is no step 3! All done! :smile:
+
 ## Contributing
 
 At the moment you don't need to contribute since Flame is still in development.
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Laraning Flame is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).

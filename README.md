@@ -34,6 +34,22 @@ So, all you have to do is to have the action methods on the respective Panel and
 
 Here is a small example:
 
+#### TwinkleController.php
+```php
+class TwinkleController extends Controller
+{
+    public function index()
+    {
+        return ['text' => 'Hi there! This is a Twinkle!'];
+    }
+
+    public function show()
+    {
+        return ['text' => 'Hi there! This is a Twinkle!'];
+    }
+}
+```
+
 ## Current development status
 - [x] Finish core development.
 - [ ] Finish identified issues/improvements for Alpha release 0.1.x.

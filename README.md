@@ -91,7 +91,7 @@ to the Panel content rendering.
 The Twinkle works like an "intelligent widget". It will render content defined in your Twinkes/ folder, given the argument passed.
 In this case, the Twinkle will load the "welcome.blade.php".
 
-BUT!
+BUT! More magic happens :heart": ...
 
 Before rendering the Twinkle, it will try to find its own respective controller (studly case) name. In our case we do have it
 in the Controllers/WelcomeController.php, so let's check it:
@@ -105,6 +105,11 @@ class WelcomeController extends Controller
         return ['text' => 'Hi there! This is a Twinkle!'];
     }
 ```
+
+Since there is the same action defined for the current route action running, it will use reflection to run the method and
+pass the data as an array. So you can then use it inside your Twinkle as a [Blade variable](https://laravel.com/docs/5.7/blade#displaying-data).
+
+
 
 ## Current development status
 - [x] Finish core development.

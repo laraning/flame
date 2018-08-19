@@ -11,19 +11,21 @@
 ## About Flame
 
 Laraning Flame is a Feature Development-driven framework that will improve the way you structure and
-develop your application features.
+develop your Laravel application features.
 
-If you use this package you will:
-* Create your features in a standard code-convention way.
-* Create and re-use graphical components (called Twinkles) that will make you improve your layout code structure.
-* Be able to execute Controller actions inside Twinkles prior to the view rendering.
+This free package will allow you to:
+* Create your features organized in a standard code-convention way, each of them inside a directory.
+* Create and re-use "intelligent" widgets, called Twinkles, that will make you improve your layout code structure.
+* Render Panels and Twinkles automatically given the route action that it's being called at a request.
+* Be able to execute Twinkle controller actions prior to its rendering on the screen.
 * Structure your application as feature modules, having a much better code readability, structure and reusability!
 
 ## Why Flame
 
 I've built Flame because I was starting to have medium size web apps (like [Laraning](https://www.laraning.com) or [Laraflash](https://www.laraflash.com)) with a lot of Blade views, Blade Components, etc.
 It was starting to be difficult to organize my features in a way that I could load data inside those views given for the respective controller action that I was running at a certain moment.
-A thought came to me: "What if I have a way to know automatically what actions am I running and then automatically load my graphical
+
+> A thought came to me: "What if I have a way to know automatically what actions am I running and then automatically load my graphical
 layout accordingly to that action, reusing the layout and not just create more and more views?"
 
 That's where Flame started. Flame will automate this behaviour for you. Let's see how.

@@ -48,7 +48,7 @@ Route::get('manage-cars', '\App\Flame\Features\ManageCars\Controllers\ManageCars
      ->name('manage-cars.index');
 ```
 
-##### Copy+Paste this route example to your web.php file (or other route file you're using with web middleware).
+##### :exclamation: Copy+Paste this route example to your web.php file (or other route file you're using with web middleware).
 
 Flame make:feature command creates a new folder in your your App\Flame\Features namespace.
 

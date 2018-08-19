@@ -43,51 +43,39 @@ php artisan make:feature
 
 Select the "flame" namespace group, then create a "Manage Cars" feature, and the action "index".
 At the end, the route example that the command give you will be:
+
 ```bash
-Route::get('manage-cars', '\App\Flame\Features\ManageCars\Controllers\ManageCarsController@index')->name('manage-cars.index');
+Route::get('manage-cars', '\App\Flame\Features\ManageCars\Controllers\ManageCarsController@index')
+     ->name('manage-cars.index');
 ```
 
 Copy+Paste this route example to your web.php file (or other route file you're using with web middleware).
 
+Flame make:feature command creates a new folder in your your App\Flame\Features namespace.
 
-```php
-Route::get('register', 'App\Features\Registration\RegistrationController@index');
+#### New feature files structure
+
+```bash
+  + ManageCars
+    + Controllers
+      > ManageCarsController.php
+      > WelcomeController.php
+    + Panels
+      > index.blade.php
+    + Twinkles
+      > welcome.blade.php
 ```
 
-In your Controller file, you just need to return the flame helper function:
+#### Files inside each directory
 
 ```php
-class RegistrationController extends Controller
+class ManageCarsController extends Controller
 {
     public function index()
     {
         return flame();
     }
 ```
-
-#### TwinkleController.php
-```php
-class TwinkleController extends Controller
-{
-    public function index()
-    {
-        return ['text' => 'Hi there! This is a Twinkle running in the index action!'];
-    }
-
-    public function show()
-    {
-        return ['text' => 'Hi there! And this one will run in the show action!'];
-    }
-}
-```
-On your Panel file, you just need to write:
-#### default.php
-```blade
-Message from Twinkle: @twinkle('welcome')
-```
-And Flame will render the respective
-
-
 
 ## Current development status
 - [x] Finish core development.

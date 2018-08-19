@@ -21,12 +21,30 @@ If you use this package you will:
 
 ## Why Flame
 
-I've built Flame because I was starting to have medium size web apps (like [Laraning](https://www.laraning.com) or [Laraflash](https://www.laraflash.com)) with a lot of Blade views, Blade Components.
-It was starting to be difficult to organize my features in a way that I could load datainside those views given for the respective controller action that I was running at a certain moment.
+I've built Flame because I was starting to have medium size web apps (like [Laraning](https://www.laraning.com) or [Laraflash](https://www.laraflash.com)) with a lot of Blade views, Blade Components, etc.
+It was starting to be difficult to organize my features in a way that I could load data inside those views given for the respective controller action that I was running at a certain moment.
 A thought came to me: "What if I have a way to know automatically what actions am I running and then automatically load my graphical
 layout accordingly to that action, reusing the layout and not just create more and more views?"
 
 That's where Flame started. Flame will automate this behaviour for you. Let's see how.
+
+## Installation
+
+You can install this package via composer using this command:
+
+```bash
+composer require laraning/flame
+```
+
+###### The package will automatically register itself (using [auto-discover](https://laravel-news.com/package-auto-discovery)).
+
+Next step is to publish the flame.php configuration file into your config folder.
+
+```bash
+php artisan vendor:publish --tag=flame-configuration
+```
+
+All done! :smile:
 
 ## How it works
 
@@ -123,24 +141,6 @@ dynamically injected into your method arguments!
 - [ ] Finalize documentation.
 - [ ] Finalize video tutorials.
 - [ ] Release for General Public use.
-
-## Installation
-
-You can install this package via composer using this command:
-
-```bash
-composer require laraning/flame
-```
-
-###### The package will automatically register itself (using [auto-discover](https://laravel-news.com/package-auto-discovery)).
-
-Next step is to publish the flame.php configuration file into your config folder.
-
-```bash
-php artisan vendor:publish --tag=flame-configuration
-```
-
-All done! :smile:
 
 ## Getting started
 

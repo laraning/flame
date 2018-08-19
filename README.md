@@ -33,7 +33,6 @@ You will create your Panels and Twinkles, and if they have a Controller attached
 ## How it works
 
 The flame.php configuration file already have an entry to put all your features in the App\Flame\Features namespace.
-Let's follow up from there...
 
 Create a new feature using the following command:
 
@@ -53,7 +52,7 @@ Copy+Paste this route example to your web.php file (or other route file you're u
 
 Flame make:feature command creates a new folder in your your App\Flame\Features namespace.
 
-#### New feature files structure
+#### Feature "Manage Cars" file structure
 
 ```bash
   + ManageCars
@@ -66,7 +65,7 @@ Flame make:feature command creates a new folder in your your App\Flame\Features 
       > welcome.blade.php
 ```
 
-#### Files inside each directory
+Let's now see what's inside on each of those files. The magic starts :heart: !
 
 ```php
 class ManageCarsController extends Controller

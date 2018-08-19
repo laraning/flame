@@ -21,7 +21,7 @@ If you use this package you will:
 
 ## Why Flame
 
-I've built Flame because I was starting to have medium size applications with a lot of Blade views, components and
+I've built Flame because I was starting to have medium size web apps (like [Laraning](https://www.laraning.com) or [Laraflash](https://www.laraflash.com)) with a lot of Blade views, components and
 it was difficult to pass Controller data results inside those views given the type of controller action that I was running.
 So, I thought "what if I have a way to know automatically what actions am I running and then automatically load my graphical
 layout accordingly to that action, reusing the layout and not just create more and more views?"
@@ -50,7 +50,7 @@ Route::get('manage-cars', '\App\Flame\Features\ManageCars\Controllers\ManageCars
 
 ##### :point_right: Copy+Paste this route example to your web.php file (or other route file you're using with web middleware).
 
-##### :floppy_disk: A new folder "ManagesCars" is created inside the "app\Flame\Features" folder.
+##### :floppy_disk: A new folder "ManagesCars" is created inside your "app\Flame\Features" folder.
 
 #### Feature "Manage Cars" file structure
 

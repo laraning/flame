@@ -39,6 +39,7 @@ return [
         /*****/
     ],
 
+    /** Shows the demo route. You can put it false sp the /flame route path is not loaded. */
     'demo' => [
         'route' => true,
     ],

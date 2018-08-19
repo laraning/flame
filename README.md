@@ -48,9 +48,7 @@ All done! :smile:
 
 ## How it works
 
-After installing Flame, let's follow this step-by-step guide to see how Flame works.
-
-The flame.php configuration file already have an entry to put all your features in the App\Flame\Features namespace.
+> The flame.php configuration file already have an entry to put all your features in the App\Flame\Features namespace.
 
 Create a new feature using the following command:
 

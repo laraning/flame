@@ -21,14 +21,12 @@ If you use this package you will:
 
 ## Why Flame
 
-I've built Flame because I was starting to have medium size web apps (like [Laraning](https://www.laraning.com) or [Laraflash](https://www.laraflash.com)) with a lot of Blade views, components and
-it was difficult to pass Controller data results inside those views given the type of controller action that I was running.
-So, I thought "what if I have a way to know automatically what actions am I running and then automatically load my graphical
+I've built Flame because I was starting to have medium size web apps (like [Laraning](https://www.laraning.com) or [Laraflash](https://www.laraflash.com)) with a lot of Blade views, Blade Components.
+It was starting to be difficult to organize my features in a way that I could load datainside those views given for the respective controller action that I was running at a certain moment.
+A thought came to me: "What if I have a way to know automatically what actions am I running and then automatically load my graphical
 layout accordingly to that action, reusing the layout and not just create more and more views?"
 
-Flame will automate this for you.
-
-You will create your Panels and Twinkles, and if they have a Controller attached to them they will then received the returned data automatically prior to the rendering!
+That's where Flame started. Flame will automate this behaivour for you, bringing you much more simplicity in building your Laravel web app features!
 
 ## How it works
 

@@ -77,8 +77,10 @@ class ManageCarsController extends Controller
 ```
 
 This is where you point out your route file. You just need to return the flame() helper so the framework will
-capture your action and render the respective Panel, with the following logic:
-> ###### Flame searches for a panel with the same action name, "index.blade.php". In case it don't exist, it tries to load a default panel called "default.blade.php". Useful if you want to have the same Panel for all your controller actions!
+capture your action and render the respective Panel.
+
+> Behind the scenes, Flame will then render the view with the same action name that you're currently running. In this case
+it will run the Panels/index.blade.php automatically! Sweet.
 
 ## Current development status
 - [x] Finish core development.

@@ -32,7 +32,23 @@ You will create your Panels and Twinkles, and if they have a Controller attached
 
 ## How it works
 
-You start by creating your route mapped to the Controller action that you would like to start your feature:
+The flame.php configuration file already have an entry to put all your features in the App\Flame\Features namespace.
+Let's follow up from there...
+
+Create a new feature using the following command:
+
+```bash
+php artisan make:feature
+```
+
+Select the "flame" namespace group, then create a "Manage Cars" feature, and the action "index".
+At the end, the route example that the command give you will be:
+```bash
+Route::get('manage-cars', '\App\Flame\Features\ManageCars\Controllers\ManageCarsController@index')->name('manage-cars.index');
+```
+
+Copy+Paste this route example to your web.php file (or other route file you're using with web middleware).
+
 
 ```php
 Route::get('register', 'App\Features\Registration\RegistrationController@index');

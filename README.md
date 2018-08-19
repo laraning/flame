@@ -10,7 +10,8 @@
 
 ## About Flame
 
-Laraning Flame is a Feature Development-driven framework that will improve the way you structure and develop your application features.
+Laraning Flame is a Feature Development-driven framework that will improve the way you structure and
+develop your application features.
 
 If you use this package you will:
 * Create your features in a standard code-convention way.
@@ -20,19 +21,33 @@ If you use this package you will:
 
 ## Why Flame
 
-I've built Flame because I was starting to have medium size applications with a lot of Blade views, components and it was difficult to pass
-Controller data results inside those views given the type of controller action that I was running. So, I thought "what if I have a way to know automatically what
-actions am I running and then automatically load my graphical layout accordingly to that action, reusing the layout and not just create more and more views?"
+I've built Flame because I was starting to have medium size applications with a lot of Blade views, components and
+it was difficult to pass Controller data results inside those views given the type of controller action that I was running.
+So, I thought "what if I have a way to know automatically what actions am I running and then automatically load my graphical
+layout accordingly to that action, reusing the layout and not just create more and more views?"
 
-Flame allows you to automate this. You will create your Panels and Twinkles, but also they will be have a Controller attached to them. This Panel/Twinkle
-controller will be used to pass data automatically to them given the action you're running. And all of this without coding anything!
+Flame will automate this for you.
+
+You will create your Panels and Twinkles, and if they have a Controller attached to them they will then received the returned data automatically prior to the rendering!
 
 ## How it works
 
-Each time you run a route action, Flame will give you the exact Panel and Twinkles that are needed to run for the respective action.
-So, all you have to do is to have the action methods on the respective Panel and Twinkle controllers and they will run automatically.
+You start by creating your route mapped to the Controller action that you would like to start your feature:
 
-Here is a small example:
+```php
+Route::get('register', 'App\Features\Registration\RegistrationController@index');
+```
+
+In your Controller file, you just need to return the flame helper function:
+
+```php
+class RegistrationController extends Controller
+{
+    public function index()
+    {
+        return flame();
+    }
+```
 
 #### TwinkleController.php
 ```php
@@ -40,15 +55,23 @@ class TwinkleController extends Controller
 {
     public function index()
     {
-        return ['text' => 'Hi there! This is a Twinkle!'];
+        return ['text' => 'Hi there! This is a Twinkle running in the index action!'];
     }
 
     public function show()
     {
-        return ['text' => 'Hi there! This is a Twinkle!'];
+        return ['text' => 'Hi there! And this one will run in the show action!'];
     }
 }
 ```
+On your Panel file, you just need to write:
+#### default.php
+```blade
+Message from Twinkle: @twinkle('welcome')
+```
+And Flame will render the respective
+
+
 
 ## Current development status
 - [x] Finish core development.

@@ -88,6 +88,24 @@ to the Panel content rendering.
 @twinkle('welcome')
 ```
 
+The Twinkle works like an "intelligent widget". It will render content defined in your Twinkes/ folder, given the argument passed.
+In this case, the Twinkle will load the "welcome.blade.php".
+
+BUT!
+
+Before rendering the Twinkle, it will try to find its own respective controller (studly case) name. In our case we do have it
+in the Controllers/WelcomeController.php, so let's check it:
+
+##### Controllers/WelcomeController.php
+```php
+class WelcomeController extends Controller
+{
+    public function index()
+    {
+        return ['text' => 'Hi there! This is a Twinkle!'];
+    }
+```
+
 ## Current development status
 - [x] Finish core development.
 - [ ] Finish identified issues/improvements for Alpha release 0.1.x.

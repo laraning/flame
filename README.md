@@ -76,12 +76,11 @@ class ManageCarsController extends Controller
     }
 ```
 
-This is where you point out your route file. You just need to return the flame() helper so the framework will
-capture your action and render the respective Panel.
+ :tada: This is where you mapped your route file You just need to return the flame() helper so Flame will load your respective
+Panel and Twinkles for the "index" action. Meaning, if your Twinkles have the "index" action defined, they will run prior
+to the Panel content rendering.
 
-:exclamation: Flame will then render the view with the same action name that you're currently running. In this case it will run the Panels/index.blade.php automatically! Sweet!
-
-> ##### In case you don't have a Panel with the same name, then it will fall back to default.blade.php. If you have a Panel with this name, it will be loaded for all of your actions that don't have a specific Panel action. Double sweet!
+> In case you don't have a Panel with the same name, then it will fall back to default.blade.php. If you have a Panel with this name, it will be loaded for all of your actions that don't have a specific Panel action. Double sweet!
 
 ## Current development status
 - [x] Finish core development.

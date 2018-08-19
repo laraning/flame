@@ -67,6 +67,7 @@ Route::get('manage-cars', '\App\Flame\Features\ManageCars\Controllers\ManageCars
 
 Let's now see what was scaffolded on each of those files. The magic starts :heart: !
 
+##### Controllers/ManageCarsController.php
 ```php
 class ManageCarsController extends Controller
 {
@@ -81,6 +82,11 @@ Panel and Twinkles for the "index" action. Meaning, if your Twinkles have the "i
 to the Panel content rendering.
 
 > In case you don't have a Panel with the same name, then it will fall back to default.blade.php. If you have a Panel with this name, it will be loaded for all of your actions that don't have a specific Panel action. Double sweet!
+
+##### Panels/welcome.blade.php
+```blade
+@twinkle('welcome')
+```
 
 ## Current development status
 - [x] Finish core development.

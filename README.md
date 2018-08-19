@@ -26,9 +26,11 @@ It was starting to be difficult to organize my features in a way that I could lo
 A thought came to me: "What if I have a way to know automatically what actions am I running and then automatically load my graphical
 layout accordingly to that action, reusing the layout and not just create more and more views?"
 
-That's where Flame started. Flame will automate this behaivour for you, bringing you much more simplicity in building your Laravel web app features!
+That's where Flame started. Flame will automate this behaviour for you. Let's see how.
 
 ## How it works
+
+After installing Flame, let's follow this step-by-step guide to see how Flame works.
 
 The flame.php configuration file already have an entry to put all your features in the App\Flame\Features namespace.
 

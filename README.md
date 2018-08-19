@@ -65,7 +65,7 @@ Flame make:feature command creates a new folder in your your App\Flame\Features 
       > welcome.blade.php
 ```
 
-Let's now see what's inside on each of those files. The magic starts :heart: !
+Let's now see what was scaffolded on each of those files. The magic starts :heart: !
 
 ```php
 class ManageCarsController extends Controller
@@ -75,6 +75,11 @@ class ManageCarsController extends Controller
         return flame();
     }
 ```
+
+This is where you point out your route file. You just need to return the flame() helper so the framework will
+capture your action and render the respective Panel, with the following logic:
+1. Searches for a panel with the same action name, like "index.blade.php". In case there is none, it tries to load a
+default panel called "default.blade.php" (useful if you want to have the same Panel for all your controller actions).
 
 ## Current development status
 - [x] Finish core development.

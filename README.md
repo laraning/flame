@@ -108,8 +108,10 @@ class WelcomeController extends Controller
 
 Since there is the same action defined for the current route action running, it will use reflection to run the method and
 pass the data as an array. So you can then use it inside your Twinkle as a [Blade variable](https://laravel.com/docs/5.7/blade#displaying-data).
+Meaning on this case, it will run the "index" method and return the data to the Welcome Twinkle.
 
-
+> The Twinkle methods also work with implicit binding. Meaning if you define your arguments from the route parameters they will be
+dynamically injected into your method arguments!
 
 ## Current development status
 - [x] Finish core development.

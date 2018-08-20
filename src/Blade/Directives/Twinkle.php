@@ -54,6 +54,8 @@ class Twinkle extends TwinkleRenderer implements Renderable
 
     public function render()
     {
-        return View::make($this->view)->with($this->data)->render();
+        return View::make($this->view)
+                   ->with($this->data)
+                   ->render();
     }
 }

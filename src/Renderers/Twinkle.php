@@ -62,7 +62,7 @@ class Twinkle extends Renderer
             $action = $this->action;
         } elseif (@method_exists($namespace, 'default')) {
             $action = 'default';
-        }
+        };
 
         if (!is_null($action)) {
             // Obtain route parameters.
@@ -72,10 +72,20 @@ class Twinkle extends Renderer
             // In case the action is update or store, we need to pass the request.
             if ($action == 'update' || $action == 'store') {
                 $arguments['request'] = request();
-            }
+            };
+
+            // Verify if there are extra parameters in the method that need depedency injection.
+            $ref = new \ReflectionMethod($namespace, $action);
+
+            $extraArguments = [];
+            if (count($ref->getParameters()) > 0) {
+                foreach ($ref->getParameters() as $data) {
+                    $extraArguments[$data->getName()] = app()->make((string)$data->getType());
+                };
+            };
 
             // Obtain response.
-            $response = app()->call("{$namespace}@{$action}", $arguments);
+            $response = app()->call("{$namespace}@{$action}", array_merge($arguments, $extraArguments));
 
             // Compute response to be arrayable.
             $response = !is_array($response) ? [$response] : $response;

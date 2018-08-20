@@ -4,8 +4,7 @@ namespace Laraning\Flame\Services;
 
 class UserService
 {
-
-    function __construct()
+    public function __construct()
     {
         $this->test = 1;
     }

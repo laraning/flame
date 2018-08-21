@@ -5,6 +5,7 @@ namespace Laraning\Flame;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Str;
 
 class FlameServiceProvider extends ServiceProvider
@@ -16,7 +17,7 @@ class FlameServiceProvider extends ServiceProvider
 
         if (config('flame.demo.route')) {
             $this->loadDemoRoute();
-        }
+        };
 
         $this->loadBladeDirectives();
         $this->loadMacros();
@@ -67,7 +68,8 @@ class FlameServiceProvider extends ServiceProvider
      */
     protected function loadDemoRoute()
     {
-        $this->loadRoutesFrom(__DIR__.'/Routes/flame.php');
+        Route::middleware(['web'])
+             ->group(path_separators(__DIR__.'/Routes/flame.php'));
     }
 
     protected function loadMacros()

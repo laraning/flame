@@ -9,6 +9,12 @@ use Laraning\Flame\Exceptions\FlameException;
 class Panel extends Renderer
 {
     /**
+     * Data to be composed into the view.
+     * @var array
+     */
+    protected $data = [];
+
+    /**
      * Action name.
      *
      * @var null
@@ -36,8 +42,9 @@ class Panel extends Renderer
      */
     protected $intermediatePath = null;
 
-    public function __construct($name = null)
+    public function __construct($data = [])
     {
+        $this->data = $data;
         $this->hint = $this->getHint();
         $this->intermediatePath = $this->getIntermediatePath($this->hint);
         $this->name = $name ?? $this->getActionMethod();
@@ -82,6 +89,7 @@ class Panel extends Renderer
      */
     public function makeView()
     {
-        return View::make($this->findView());
+        return View::make($this->findView())
+                   ->with($this->data);
     }
 }

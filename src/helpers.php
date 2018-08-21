@@ -2,9 +2,9 @@
 
 use Laraning\Flame\Renderers\Panel;
 
-function flame($name = null)
+function flame($data = [])
 {
-    return (new Panel($name))->makeView();
+    return (new Panel($data))->makeView();
 }
 
 if (!function_exists('package_path')) {

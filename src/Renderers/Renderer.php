@@ -17,7 +17,7 @@ class Renderer
      *
      * @return string Controller namespace.
      */
-    final protected function controllerNamespace()
+    protected function controllerNamespace()
     {
         return get_class(Route::getCurrentRoute()->getController());
     }
@@ -30,7 +30,7 @@ class Renderer
      *
      * @return string View hint.
      */
-    final protected function getHint()
+    protected function getHint()
     {
         // Map a new array with [group => namespace].
         $groups = collect(config('flame.groups'))->mapWithKeys(function ($item, $key) {

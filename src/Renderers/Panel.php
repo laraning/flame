@@ -42,9 +42,22 @@ class Panel extends Renderer
      */
     protected $intermediatePath = null;
 
-    public function __construct($data = [])
+    public function __construct($args)
     {
-        $this->data = $data;
+        // Compute arguments: ($name, $data[]) or just ($name).
+        // Refactor later. Or never :)
+        if (isset($args[0]) && is_array($args[0])) {
+            $this->data = $args[0];
+        };
+
+        if (isset($args[0]) && !is_array($args[0])) {
+            $name = $args[0];
+        };
+
+        if (isset($args[1]) && is_array($args[0])) {
+            $this->data = $args[1];
+        };
+
         $this->hint = $this->getHint();
         $this->intermediatePath = $this->getIntermediatePath($this->hint);
         $this->name = $name ?? $this->getActionMethod();

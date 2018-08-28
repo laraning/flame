@@ -13,6 +13,7 @@ class FlameServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->publishConfiguration();
+
         $this->loadConfigurationGroups();
 
         if (config('flame.demo.route')) {
@@ -20,6 +21,7 @@ class FlameServiceProvider extends ServiceProvider
         }
 
         $this->loadBladeDirectives();
+
         $this->loadMacros();
     }
 

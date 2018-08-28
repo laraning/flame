@@ -21,15 +21,12 @@ class FlameServiceProvider extends ServiceProvider
         }
 
         $this->loadBladeDirectives();
-
-        $this->loadMacros();
     }
 
     public function register()
     {
         $this->commands([
             \Laraning\Flame\Commands\MakeFeatureCommand::class,
-            \Laraning\Flame\Commands\ViewhintsCommand::class,
         ]);
     }
 
@@ -72,52 +69,5 @@ class FlameServiceProvider extends ServiceProvider
     {
         Route::middleware(['web'])
              ->group(path_separators(__DIR__.'/Routes/flame.php'));
-    }
-
-    protected function loadMacros()
-    {
-        /*
-         * Returns the string that matchest the longest FULL string from an array of strings.
-         * @param array $haystack The strings array.
-         * @param string $needle The string to match.
-         * @return string|null The full longest string matched, or null in case there is no match.
-         */
-        if (!method_exists('Str', 'longestMatch')) {
-            Str::macro('longestMatch', function (array $haystack, string $needle) {
-                $longestDegree = 0;
-                $result = null;
-                collect($haystack)->each(function ($item) use ($needle, &$result, &$longestDegree) {
-                    $partialDegree = 0;
-                    foreach (str_split($item) as $index => $letter) {
-                        // Test each character, and exit when character is different.
-                        if ($letter != substr($needle, $index, 1)) {
-                            break;
-                        }
-                        $partialDegree++;
-                    }
-
-                    if ($partialDegree > $longestDegree && $partialDegree == strlen($item)) {
-                        $longestDegree = $partialDegree;
-                        $result = $item;
-                    }
-                });
-
-                return $result;
-            });
-        }
-
-        /*
-         * Creates directories given a directories array
-         * @var array Directories array to create (e.g.: ['test','john/smith']).
-         */
-        if (!method_exists('File', 'makeDirectories')) {
-            File::macro('makeDirectories', function (array $directories): void {
-                foreach ($directories as $directory) {
-                    if (!File::exists($directory)) {
-                        File::makeDirectory($directory, 0775, true);
-                    }
-                }
-            });
-        }
     }
 }

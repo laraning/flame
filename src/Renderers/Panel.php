@@ -49,15 +49,15 @@ class Panel extends Renderer
         // Refactor later. Or never :)
         if (isset($args[0]) && is_array($args[0])) {
             $this->data = $args[0];
-        };
+        }
 
         if (isset($args[0]) && !is_array($args[0])) {
             $name = $args[0];
-        };
+        }
 
         if (isset($args[1]) && is_array($args[0])) {
             $this->data = $args[1];
-        };
+        }
 
         $this->hint = $this->getHint();
         $this->intermediatePath = $this->getIntermediatePath($this->hint);

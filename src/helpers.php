@@ -7,17 +7,6 @@ function flame(...$args)
     return (new Panel($args))->makeView();
 }
 
-if (!function_exists('package_path')) {
-    function package_path($path)
-    {
-        $base = file_exists(base_path('vendor/laraning/flame')) ?
-            'vendor' :
-            'packages';
-
-        return base_path("{$base}/laraning/flame/src/".$path);
-    }
-}
-
 if (!function_exists('path_separators')) {
     function path_separators($path)
     {

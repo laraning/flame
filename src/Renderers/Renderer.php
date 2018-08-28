@@ -33,7 +33,7 @@ class Renderer
     protected function getHint()
     {
         // Map a new array with [group => namespace].
-        $groups = collect(config('flame.groups'))->mapWithKeys(function ($item, $key) {
+        $groups = collect(config('flame'))->mapWithKeys(function ($item, $key) {
             return [$key => $item['namespace']];
         });
 
@@ -70,7 +70,7 @@ class Renderer
      */
     protected function getIntermediatePath($hint)
     {
-        $namespace = config("flame.groups.{$hint}.namespace");
+        $namespace = config("flame.{$hint}.namespace");
         $namespaceTail = substr($this->controllerNamespace(), strlen($namespace) + 1);
 
         return collect(explode('\\', $namespaceTail))->splice(0, -2)->implode('.');

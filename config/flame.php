@@ -15,7 +15,7 @@ return [
             As the one specified:
             'demo' => [
                 'namespace' => 'Laraning\Flame\Features',
-                'path'      => package_path('laraning/flame/src/Features'),
+                'path'      => base_path('vendor/laraning/flame/src/Features')
             ]
 
             Means that Flame will autoload the demo namespace group, and load features from the
@@ -24,7 +24,7 @@ return [
 
         'demo' => [
             'namespace' => 'Laraning\Flame\Features',
-            'path'      => package_path('Features'),
+            'path'      => base_path('vendor/laraning/flame/src/Features'),
         ],
 
         /* Suggested namespace group for your Laravel app.

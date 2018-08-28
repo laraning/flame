@@ -50,7 +50,7 @@ class Twinkle extends Renderer
         $action = null;
 
         //Compute component controller namespace (studly case!).
-        $namespace = config("flame.groups.{$this->hint}.namespace").
+        $namespace = config("flame.{$this->hint}.namespace").
                           '\\'.
                           str_replace('.', '\\', $this->intermediatePath).
                           '\\Controllers\\'.

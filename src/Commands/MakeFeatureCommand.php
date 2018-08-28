@@ -70,10 +70,10 @@ class MakeFeatureCommand extends Command
      */
     public function handle()
     {
-        $namespaceGroups = collect(array_keys(config('flame.groups')));
+        $namespaceGroups = collect(array_keys(config('flame')));
 
         $namespaceGroups->transform(function ($item) {
-            return $item.' ('.config("flame.groups.{$item}.namespace").')';
+            return $item.' ('.config("flame.{$item}.namespace").')';
         });
 
         $this->info('');
@@ -109,9 +109,9 @@ class MakeFeatureCommand extends Command
         // Create parameters, except default action.
         $this->group = $hint;
         $this->feature = studly_case($this->feature);
-        $this->basePath = path_separators(config("flame.groups.{$this->group}.path")."/{$this->feature}");
+        $this->basePath = path_separators(config("flame.{$this->group}.path")."/{$this->feature}");
         $this->action = camel_case($this->action);
-        $this->controllerNamespace = config("flame.groups.{$this->group}.namespace").
+        $this->controllerNamespace = config("flame.{$this->group}.namespace").
                                      '\\'.
                                      $this->feature.
                                      "\\Controllers\\{$this->feature}Controller";
@@ -205,7 +205,7 @@ class MakeFeatureCommand extends Command
             package_path("../resources/scaffolding/{$root}/Feature/Controllers/FeatureController.php.stub"),
             $this->basePath."/Controllers/{$this->feature}Controller.php",
             ['{{namespace}}', '{{controller_name}}', '{{action}}'],
-            [config("flame.groups.{$this->group}.namespace").'\\'.$this->feature.'\\Controllers', "{$this->feature}Controller", $this->action]
+            [config("flame.{$this->group}.namespace").'\\'.$this->feature.'\\Controllers', "{$this->feature}Controller", $this->action]
         );
 
         // Twinkle Controller.
@@ -213,7 +213,7 @@ class MakeFeatureCommand extends Command
             package_path("../resources/scaffolding/{$root}/Feature/Controllers/WelcomeController.php.stub"),
             $this->basePath.'/Controllers/WelcomeController.php',
             ['{{namespace}}', '{{action}}'],
-            [config("flame.groups.{$this->group}.namespace").'\\'.$this->feature.'\\Controllers', $this->action]
+            [config("flame.{$this->group}.namespace").'\\'.$this->feature.'\\Controllers', $this->action]
         );
 
         // Panel.

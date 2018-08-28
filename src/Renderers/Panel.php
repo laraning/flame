@@ -10,6 +10,7 @@ class Panel extends Renderer
 {
     /**
      * Data to be composed into the view.
+     *
      * @var array
      */
     protected $data = [];
